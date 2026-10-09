@@ -3,7 +3,7 @@
 Homebrew casks for Munero Limited's macOS apps.
 
 ```sh
-brew install --cask munero/tap/kettle
+brew install --cask muneroltd/tap/kettle
 ```
 
 | Cask | App |
