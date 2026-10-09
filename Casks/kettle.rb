@@ -1,6 +1,6 @@
 cask "kettle" do
-  version "0.1.7"
-  sha256 :no_check
+  version "0.1.8"
+  sha256 "ca7faa9c79b67a0c2722b7065ce3e0572214e1c068a2d16878ee66e8bd747aef"
 
   url "https://github.com/MuneroLtd/kettle-releases/releases/download/v#{version}/Kettle-#{version}.zip"
   name "Kettle"
@@ -11,6 +11,10 @@ cask "kettle" do
     url :url
     strategy :github_latest
   end
+
+  # Kettle updates itself with Sparkle (FR-63), so brew upgrade leaves it alone unless --greedy, and
+  # brew outdated does not list a copy Sparkle has already moved past the cask's version.
+  auto_updates true
 
   # Package.swift: platforms [.macOS(.v14)]; a bare release means "or later" (Homebrew/OSDependsOn)
   depends_on macos: :sonoma
