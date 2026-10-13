@@ -1,6 +1,6 @@
 cask "kettle" do
-  version "0.1.10"
-  sha256 "4e8b8b09af6b0cc9e382d84ead7a2ff4172ee3fa92fc95a7ebef71cfe6e3676b"
+  version "0.1.11"
+  sha256 "f0670518b4f4fce443328ba7951b74ad0bf997d1250a5fa018937076fdd0702d"
 
   url "https://github.com/MuneroLtd/kettle-releases/releases/download/v#{version}/Kettle-#{version}.zip"
   name "Kettle"
