@@ -1,6 +1,6 @@
 cask "kettle" do
-  version "0.1.11"
-  sha256 "f0670518b4f4fce443328ba7951b74ad0bf997d1250a5fa018937076fdd0702d"
+  version "0.1.12"
+  sha256 "9b1dd92757fc3fbf67c173cd8b2cdeb447a1210e1d8343965f2ba14a2414fb89"
 
   url "https://github.com/MuneroLtd/kettle-releases/releases/download/v#{version}/Kettle-#{version}.zip"
   name "Kettle"
@@ -32,7 +32,9 @@ cask "kettle" do
 
   caveats <<~EOS
     Kettle registers hooks in your Claude Code settings when you set it up.
-    Before uninstalling, remove them (your earlier settings are restored):
+    Before uninstalling, choose Settings, General, Uninstall Kettle in the app,
+    then Quit Kettle. It removes its own parts from your settings and keeps
+    your later changes. Or, with Kettle quit:
       #{appdir}/Kettle.app/Contents/MacOS/Kettle --uninstall-hooks
   EOS
 end
